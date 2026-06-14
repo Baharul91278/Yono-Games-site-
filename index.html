@@ -1,4 +1,5 @@
-Here isgrid, download pages with button at top, FAQ, info cards, modals) remain unchanged.
+Here 
+```Here is the final HTML with a black tag added around the “Yono Games Platform” title – a dark rounded background that makes the animated rainbow text stand out beautifully. All other features remain unchanged.
 
 ```html
 <!DOCTYPE html>
@@ -107,7 +108,7 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
             display: block;
         }
 
-        /* HEADER with 5 colored lightning bolts and split animated title */
+        /* HEADER with 5 colored lightning bolts and split animated title + BLACK TAG */
         header {
             background: linear-gradient(135deg, #0a2e1d, #0d5c2e, #1a6e3a, #0a4a2a);
             background-size: 300% 300%;
@@ -151,6 +152,16 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
             0% { transform: scale(1) translateY(0px); opacity: 0.8; }
             50% { transform: scale(1.2) translateY(-4px); opacity: 1; text-shadow: 0 0 12px gold; }
             100% { transform: scale(1) translateY(0px); opacity: 0.8; }
+        }
+
+        /* BLACK TAG around the title */
+        .title-black-tag {
+            display: inline-block;
+            background: #000000;
+            padding: 12px 28px;
+            border-radius: 80px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5), inset 0 0 5px rgba(255,255,255,0.1);
+            margin-top: 10px;
         }
 
         /* Split title animations - each word has its own 5-color slow gradient */
@@ -675,7 +686,8 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
         @media (max-width: 640px) {
             .menu-btn { font-size: 1rem; padding: 4px 12px; }
             .lightning { font-size: 1.5rem; gap: 12px; }
-            .title-word { font-size: 1.6rem; }
+            .title-black-tag { padding: 8px 16px; }
+            .title-word { font-size: 1.4rem; margin: 0 2px; }
             .card { min-width: 250px; padding: 18px 14px; }
             .card-app-name { font-size: 1.2rem; }
             .card-stats { gap: 8px; }
@@ -717,7 +729,7 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
         </div>
     </div>
 
-    <!-- HEADER with 5 colored lightning bolts and split animated title -->
+    <!-- HEADER with 5 colored lightning bolts and split animated title + BLACK TAG -->
     <header>
         <div class="lightning-row">
             <span class="lightning">⚡</span>
@@ -726,7 +738,7 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
             <span class="lightning">⚡</span>
             <span class="lightning">⚡</span>
         </div>
-        <div>
+        <div class="title-black-tag">
             <span class="title-word word-yono">Yono</span>
             <span class="title-word word-games">Games</span>
             <span class="title-word word-platform">Platform</span>
@@ -1048,7 +1060,7 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
             }
         });
 
-        // ------------------ Dropdown Menu Logic (Telegram removed from About Us) ------------------
+        // ------------------ Dropdown Menu Logic ------------------
         const menuBtn = document.getElementById('menuBtn');
         const dropdown = document.getElementById('dropdownMenu');
         const menuHome = document.getElementById('menuHome');
@@ -1102,7 +1114,6 @@ Here isgrid, download pages with button at top, FAQ, info cards, modals) remain 
             `);
         });
 
-        // About Us - Telegram removed
         menuAbout.addEventListener('click', () => {
             dropdown.classList.remove('show');
             showInfoModal('⭐ About Us – Yono Games Platform', `
