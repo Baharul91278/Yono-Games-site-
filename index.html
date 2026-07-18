@@ -922,7 +922,7 @@
             }
         });
 
-        // ---------- APP DATA (36 apps: 32 original + 4 new) ----------
+        // ---------- APP DATA (36 apps) ----------
         const allApps = [
             { name: "567 Slots", bonus: "₹45", withdrawal: "₹100", downloadUrl: "https://join567slots0.com/?code=4NYF487URJ6&t=1781505684", img: "https://i.ibb.co/hFytMXY2/1000022725.jpg", category: "Slots" },
             { name: "Saga Slots", bonus: "₹40", withdrawal: "₹100", downloadUrl: "https://www.sagaslots5.com/?code=0QHJSERZYMV&t=1781505813", img: "https://i.ibb.co/20dzhBZf/1000022725.jpg", category: "Slots" },
@@ -938,7 +938,6 @@
             { name: "Teen Patti Gold", bonus: "₹37", withdrawal: "₹100", downloadUrl: "https://www.earntp.com/gold/jm9n7r", img: "https://i.ibb.co/C5XcGXsJ/teen-patti-gold.jpg", category: "Card" },
             { name: "Teen Patti Master", bonus: "₹20", withdrawal: "₹100", downloadUrl: "https://www.earntp.com/m/jm9n7r", img: "https://i.ibb.co/JjrZjn2n/teen-patti-master.jpg", category: "Card" },
             { name: "Yono Rummy", bonus: "₹25", withdrawal: "₹100", downloadUrl: "https://yonorummy043.com/?code=VIPYQC5EE9X&t=1781107758", img: "https://i.ibb.co/zTFDGPpX/yono-rummy.jpg", category: "Rummy" },
-            // --- original Slots Winner (duplicate name, we keep one; new one with different URL/photo is added below with distinct name) 
             { name: "Slots Winner", bonus: "₹40", withdrawal: "₹100", downloadUrl: "https://slotswinneri.com/?code=PGVC6CBNF53&t=1781107393", img: "https://i.ibb.co/NdbNBtx7/slots-winner.jpg", category: "Slots" },
             { name: "Good Slots", bonus: "₹15", withdrawal: "₹100", downloadUrl: "https://7sharegoodslots.vip?pid=320806209&channel=2010001&t=pdd2&pkg=com.1", img: "https://i.ibb.co/nq9kMKHZ/good-slots.jpg", category: "Slots" },
             { name: "Diwa Slot", bonus: "₹50", withdrawal: "₹100", downloadUrl: "https://sharediwaslot1.vip?pid=483455673&channel=2010002&t=pdd2&pkg=com.diwaslotwhl.app", img: "https://i.ibb.co/BKB6QMbD/diwa-slot.jpg", category: "Slots" },
@@ -959,7 +958,6 @@
             // ----- 4 NEW APPS ADDED -----
             { name: "Yono Games", bonus: "₹45", withdrawal: "₹100", downloadUrl: "https://yonogamesm.com/?code=LHS49AEHVMR&t=1784314209", img: "https://i.ibb.co/LXqV77rd/yono-games.jpg", category: "Slots" },
             { name: "INR Rummy", bonus: "₹45", withdrawal: "₹100", downloadUrl: "https://inrrummy.club/?code=JMQBV8TAPD7&t=1784298106", img: "https://i.ibb.co/Y7ZRkLFp/inr-rummy.jpg", category: "Rummy" },
-            // second Slots Winner (new one with different URL and photo; we rename to "Slots Winner Pro" to avoid duplicate name conflict)
             { name: "Slots Winner Pro", bonus: "₹45", withdrawal: "₹100", downloadUrl: "https://slotswinneri.com/?code=PGVC6CBNF53&t=1784299271", img: "https://i.ibb.co/wNYf5LG8/slots-winner.jpg", category: "Slots" },
             { name: "MBM BET", bonus: "₹45", withdrawal: "₹100", downloadUrl: "https://www.mbmbet3.com/?code=GD3H3VA6YK5&t=1784297830", img: "https://i.ibb.co/sJcmCxK6/mbm-bet.jpg", category: "Casino" }
         ];
@@ -998,7 +996,135 @@
             return { rating: ratings[idx], size: sizes[idx], votes: votes[idx] };
         }
 
+        // ----- NEW YONO GAMES DESCRIPTION (replaces old tag) -----
+        function getYonoGamesDescription() {
+            return `
+                <div style="text-align: left; background: white; padding: 18px 20px; border-radius: 32px; margin: 20px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
+                    <p><strong>The Yono Games App</strong> is a popular all-in-one gaming platform designed for players who enjoy skill-based and casual games on their mobile devices. Known for its smooth performance, user-friendly design, and wide variety of games, Yono Games brings entertainment, strategy, and rewards together in a single app ecosystem.</p>
+                    <p>With millions of users across India, the Yono Games App has become a trusted name for players looking for reliable gameplay, daily rewards, and an engaging gaming experience. Download the app and claim the welcome bonus instantly upon sign-up.</p>
+                    
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Table of Contents</h3>
+                    <ul style="padding-left: 20px; margin-bottom: 12px;">
+                        <li>What is Yono Games App?</li>
+                        <li>Popular Apps Under Yono Games</li>
+                        <li>How to Download Yono Games App?</li>
+                        <li>Bonuses & Rewards in Yono Games</li>
+                        <li>Why Choose Yono Games App?</li>
+                        <li>Is Yono Games App Safe?</li>
+                        <li>Official Yono Games Website</li>
+                    </ul>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">What is Yono Games App?</h3>
+                    <p>Yono Games App is a gaming platform developed and managed by Uono Play (formerly Yono Games). It offers access to multiple popular gaming apps and variants, including rummy games, spin-based games, card games, and other fun skill-based titles.</p>
+                    <p>Instead of downloading different apps separately, players can explore various Yono Games releases and choose the one that fits their playing style. Each game under the Yono Games brand is designed with fairness, speed, and user satisfaction in mind.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Popular Apps Under Yono Games</h3>
+                    <p>Yono Games has released several well-known and widely played apps, including: Yono VIP, Rummy 365, Rummy 888, Yono 777, Jaiho Spin, Slots Winner, Gogo Rummy, Maha Games, IND Slots, MKM Bet, Ever 777, Boss Rummy, Joy Rummy and many more.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">How to Download Yono Games App?</h3>
+                    <p><strong>For Android Users:</strong></p>
+                    <ol style="padding-left: 20px;">
+                        <li>Visit the official Yono Games website or any verified Yono Games app page.</li>
+                        <li>Choose the game you want to play from the available list.</li>
+                        <li>Tap on the Download APK button.</li>
+                        <li>Open your phone's Downloads folder and install the APK file.</li>
+                        <li>Register with your mobile number and start playing instantly.</li>
+                    </ol>
+                    <p style="margin-top: 8px;">⚠️ Always download Yono Games apps only from official or verified sources to avoid fake versions.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Bonuses & Rewards in Yono Games</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>Welcome Bonus on registration</li>
+                        <li>Daily Login Rewards</li>
+                        <li>Weekly & Monthly Bonuses</li>
+                        <li>VIP Programs with exclusive perks</li>
+                        <li>Referral Rewards for inviting friends</li>
+                        <li>Special Event & Festival Offers</li>
+                    </ul>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Why Choose Yono Games App?</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>Developed by Uono Play, a trusted gaming company.</li>
+                        <li>Multiple games available under one brand.</li>
+                        <li>Smooth, fast, and secure gameplay.</li>
+                        <li>Fair play systems and transparent rewards.</li>
+                        <li>User-friendly interface suitable for all players.</li>
+                        <li>Regular updates and new game releases.</li>
+                    </ul>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Is Yono Games App Safe?</h3>
+                    <p>Yes, Yono Games App ecosystem is safe and reliable. All apps under the Yono Games brand use secure technology, encrypted systems, and fair gameplay algorithms. Uono Play follows responsible gaming practices and ensures user data protection across all its platforms.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Official Yono Games Website</h3>
+                    <p>To get the best and safest experience, always download games from the official Yono Games website or trusted partner platforms. This ensures you receive the latest version, secure login, and full access to bonus offers.</p>
+                    <p>If you're looking for a reliable gaming platform with multiple exciting options, the Yono Games App is the perfect choice. Explore different games, enjoy daily rewards, and experience smooth gameplay—all backed by the trusted Yono Games brand.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Guide: Yono Games APK Download, Tips, Login & Registration</h3>
+                    <p>If you are searching for Yono Games APK download, Yono Games new version, or the latest Yono Games update app, you are on the right page. Yono Games is a popular skill-based gaming app that offers smooth gameplay, fast login, and an easy registration process for Indian users.</p>
+                    <p>This page provides complete information related to Yono Games game, including APK download (latest and old versions), registration steps, and login support. Whether you are a new user or an existing player, you can find all the details here.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Guide: Yono Games APK Download, Tips, Login & Registration update</h3>
+                    <p>If you are searching for Yono Games APK download, Yono Games new version, or the latest Yono Games app, you are on the right page. Yono Games is a popular skill-based gaming app that offers smooth gameplay, fast login, and an easy registration process for Indian users.</p>
+                    <p>This page provides complete information related to Yono Games game, including APK download (latest and old versions), registration steps, and login support. Whether you are a new user or an existing player, you can find all the details here.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Yono Games APK Download (Latest & Old Version – update)</h3>
+                    <p>Many users look for different versions of the app such as Yono Games download, Yono Games game download apk, Yono Games new update download apk, or even Yono Games registration apk download old version.</p>
+                    <p>The Yono Games APK is available in both the latest version and old version for users who prefer compatibility with older Android devices. The update version comes with improved performance, faster loading time, and better app stability.</p>
+                    <p>Use the download button above to get the official Yono Games APK safely on your device.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Yono Games Registration – How to Join</h3>
+                    <p>If you are looking for Yono Games registration, join in Yono Games, or Yono Games registration online, the process is very simple and user-friendly.</p>
+                    <ol style="padding-left: 20px;">
+                        <li>Download the Yono Games app</li>
+                        <li>Open the app and tap on Register</li>
+                        <li>Enter your mobile number</li>
+                        <li>Verify using OTP</li>
+                        <li>Complete registration and start playing</li>
+                    </ol>
+                    <p>No lengthy forms are required. The entire Yono Games registration process works online using your mobile number.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Yono Games Login – New & Existing Users</h3>
+                    <p>Users often search for Yono Games login, Yono Games new login, Yono Games all login, or Yono Yono Games login APK.</p>
+                    <p>To log in, open the app, enter your registered mobile number, and verify via OTP. The latest Yono Games login system is faster, safer, and more reliable than previous versions.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Yono Games App Features</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>Fast and smooth gameplay</li>
+                        <li>Easy APK installation</li>
+                        <li>Optimized for both low-end and high-end devices</li>
+                        <li>Regular updates with new versions</li>
+                        <li>Simple registration and login process</li>
+                    </ul>
+                    <p>This is why searches like Yono Games apps, Yono Games apps download, and Yono Games all continue to grow.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Yono Games & Yono Games</h3>
+                    <p>Many players search for Yono Games Yono Games or all Yono games Yono Games. Yono Games is commonly listed among Yono-style skill gaming apps and is preferred by users who enjoy competitive and reward-based gameplay.</p>
+                    <p>Players who already use other Yono platforms often add Yono Games as an alternative or additional gaming app.</p>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Is Yono Games APK Safe to Download?</h3>
+                    <p>Yes, the Yono Games APK is safe to download when installed from a trusted and verified source. Always avoid random or unknown websites to protect your device from fake or modified APK files.</p>
+                    <p>This page provides access to:</p>
+                    <ul style="padding-left: 20px;">
+                        <li>Latest Yono Games APK</li>
+                        <li>Old version APK</li>
+                        <li>Registration and login guidance</li>
+                    </ul>
+
+                    <h3 style="margin: 16px 0 8px; color: #1e562a;">Important Tips for Yono Games Users</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>Ensure stable internet during login or registration</li>
+                        <li>Use the latest Yono Games apk version for best performance</li>
+                        <li>Make sure OTP messages are not blocked on your device</li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        // ----- OVERRIDE for Yono Games description -----
         function getDescription(appName, category, bonusAmount) {
+            if (appName === "Yono Games") {
+                return getYonoGamesDescription();
+            }
             if (category === "Rummy") return `Join the best rummy experience on ${appName}. Compete with real players, win cash prizes, and enjoy daily tournaments. ${bonusAmount} welcome bonus + ₹100 min withdrawal.`;
             if (category === "Slots") return `Spin & win with ${appName}! Huge jackpots, free spins, and ${bonusAmount} joining bonus. Play premium slot machines and withdraw your winnings instantly.`;
             if (category === "Spin") return `Exciting spin games on ${appName}. Get ${bonusAmount} free cash, daily rewards, and fast UPI withdrawals.`;
