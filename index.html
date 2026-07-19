@@ -97,13 +97,13 @@
     .back-btn:active { transform: scale(0.95); }
     .game-detail-title { 
       font-weight: 700; 
-      font-size: 0.85rem; 
-      color: #0b1e33; 
+      font-size: 0.75rem; 
+      color: #ffffff; 
       background: #1e293b; 
-      color: white; 
-      padding: 3px 14px; 
+      padding: 4px 14px; 
       border-radius: 40px; 
       cursor: pointer;
+      white-space: nowrap;
     }
     .game-detail-title:active { transform: scale(0.95); }
     
@@ -179,7 +179,7 @@
       .info-box .box-content { font-size: 0.7rem; }
       .marquee-container marquee { font-size: 0.6rem; }
       .marquee-container marquee span { margin: 0 15px; }
-      .game-detail-title { font-size: 0.7rem; padding: 2px 10px; }
+      .game-detail-title { font-size: 0.6rem; padding: 3px 10px; }
     }
   </style>
 </head>
@@ -251,7 +251,7 @@
   <div id="detailView" style="display:none;">
     <div class="game-detail-header">
       <button class="back-btn" id="backBtn">← Back</button>
-      <span class="game-detail-title" id="detailTitle">APK</span>
+      <span class="game-detail-title" id="detailTitle">Download APK • ₹45 Bonus</span>
     </div>
     <div class="detail-card">
       <div class="detail-top">
@@ -507,7 +507,7 @@
       detailView.style.display = 'block';
       document.getElementById('detailImg').src = game.img;
       document.getElementById('detailName').textContent = game.name;
-      document.getElementById('detailTitle').textContent = game.name + ' APK';
+      document.getElementById('detailTitle').textContent = 'Download ' + game.name + ' APK • ₹45 Bonus';
       document.getElementById('detailSignup').textContent = '🔴 Sign Up Bonus ' + game.bonus;
       document.getElementById('detailWithdraw').textContent = '🏦 Min. Withdraw ' + game.withdrawal;
       document.getElementById('detailBonus').textContent = '🎁 ' + game.bonus;
