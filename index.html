@@ -18,17 +18,15 @@
     body { background: #f5f7fc; padding: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
     .container { max-width: 480px; width: 100%; background: #fff; min-height: 100vh; }
     
-    /* Top Header: Left logo+name, Right HOME small */
-    .top-header { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: white; border-bottom: 1px solid #e9edf4; position: sticky; top: 0; z-index: 10; }
+    /* Top Header: Left logo+name only (NO HOME button) */
+    .top-header { display: flex; justify-content: flex-start; align-items: center; padding: 8px 12px; background: white; border-bottom: 1px solid #e9edf4; position: sticky; top: 0; z-index: 10; }
     .header-left { display: flex; align-items: center; gap: 8px; }
     .header-left .logo-img { width: 38px; height: 38px; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; flex-shrink: 0; }
     .header-left .logo-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .header-left .site-name { font-weight: 700; font-size: 0.8rem; color: #0b1e33; line-height: 1.2; }
     .header-left .site-name small { display: block; font-weight: 400; font-size: 0.5rem; color: #64748b; }
-    .header-right .home-btn { background: #1e293b; color: white; border: none; padding: 4px 10px; border-radius: 40px; font-weight: 600; font-size: 0.55rem; cursor: pointer; text-decoration: none; display: inline-block; }
-    .header-right .home-btn:active { transform: scale(0.95); }
     
-    /* 4 small nav links: HOME | ABOUT | CONTACT | DISCLAIMER */
+    /* 4 small nav links: HOME | ABOUT | CONTACT | DISCLAIMER (only one HOME) */
     .nav-row-small { display: flex; justify-content: space-around; align-items: center; background: #f8fafc; padding: 4px 6px; border-bottom: 1px solid #e9edf4; gap: 2px; }
     .nav-small { font-size: 0.55rem; font-weight: 600; color: #1e293b; background: white; padding: 3px 10px; border-radius: 40px; border: 1px solid #e2e8f0; cursor: pointer; text-decoration: none; transition: 0.15s; white-space: nowrap; }
     .nav-small:active { transform: scale(0.95); }
@@ -104,18 +102,15 @@
 </head>
 <body>
 <div class="container">
-  <!-- Top Header: Logo + Name | HOME small -->
+  <!-- Top Header: Logo + Name only (NO HOME button) -->
   <div class="top-header">
     <div class="header-left">
       <div class="logo-img"><img src="https://i.ibb.co/CssC2WbG/1000022725.jpg" alt="All Yono Games Site"></div>
       <div class="site-name">All Yono Games <small>site</small></div>
     </div>
-    <div class="header-right">
-      <a href="#" class="home-btn" id="homeTopBtn">🏠 HOME</a>
-    </div>
   </div>
 
-  <!-- 4 small nav links: HOME | ABOUT | CONTACT | DISCLAIMER -->
+  <!-- 4 small nav links: HOME | ABOUT | CONTACT | DISCLAIMER (only one HOME) -->
   <div class="nav-row-small">
     <span class="nav-small active" id="homeNav">🏠 Home</span>
     <span class="nav-small" data-target="about">About</span>
@@ -237,7 +232,6 @@
     const mainGrid = document.getElementById('mainGrid');
     const detailView = document.getElementById('detailView');
     const backBtn = document.getElementById('backBtn');
-    const homeTopBtn = document.getElementById('homeTopBtn');
     const homeNav = document.getElementById('homeNav');
 
     // Overlay
@@ -266,7 +260,7 @@
       });
     });
 
-    // Home nav click
+    // Home nav click - only one HOME
     homeNav.addEventListener('click', function() {
       detailView.style.display = 'none';
       mainGrid.style.display = 'flex';
@@ -430,10 +424,6 @@
     }
 
     backBtn.addEventListener('click', goBack);
-    homeTopBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      goBack();
-    });
 
   })();
 </script>
