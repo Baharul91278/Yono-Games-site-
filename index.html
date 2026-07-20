@@ -98,7 +98,7 @@
     .faq-box .faq-q { font-weight: 700; font-size: 0.8rem; color: #0b1e33; margin-bottom: 4px; }
     .faq-box .faq-a { font-size: 0.7rem; color: #334155; line-height: 1.6; }
     
-    /* ====== TABLE OF CONTENTS WITH HIDDEN 5 TAGS ====== */
+    /* ====== TABLE OF CONTENTS WITH 5 HIDDEN TAGS ====== */
     .toc-section { padding: 12px; background: #f8fafc; border-top: 1px solid #e9edf4; }
     .toc-header { display: flex; justify-content: space-between; align-items: center; background: white; padding: 12px 16px; border-radius: 12px; border: 1px solid #e9edf4; cursor: pointer; transition: 0.2s; }
     .toc-header:active { transform: scale(0.97); }
@@ -121,10 +121,24 @@
     .toc-item .toc-content ul li::before { content: "• "; color: #2563eb; font-weight: 700; }
     .toc-item .toc-content strong { color: #0b1e33; }
     
-    .info-tags-section { padding: 12px; background: white; border-top: 1px solid #e9edf4; }
-    .info-tags-section .info-title { font-weight: 700; font-size: 0.9rem; color: #0b1e33; margin-bottom: 10px; }
-    .info-tags-grid { display: flex; flex-wrap: wrap; gap: 6px; }
-    .info-tag { background: #f1f5f9; padding: 4px 12px; border-radius: 40px; font-size: 0.6rem; color: #1e293b; border: 1px solid #e2e8f0; }
+    /* ====== REPLACED INFO TAGS WITH GAME TAGS ====== */
+    .game-tags-section { padding: 12px; background: white; border-top: 1px solid #e9edf4; }
+    .game-tags-section .game-tags-title { font-weight: 700; font-size: 0.9rem; color: #0b1e33; margin-bottom: 10px; }
+    .game-tags-container { display: flex; flex-wrap: wrap; gap: 8px; }
+    .game-tag { 
+      background: #eef2ff; 
+      color: #2563eb; 
+      padding: 6px 14px; 
+      border-radius: 40px; 
+      font-size: 0.7rem; 
+      font-weight: 600; 
+      border: 1px solid #b3c8e6; 
+      cursor: pointer; 
+      transition: 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .game-tag:active { transform: scale(0.95); background: #dbeafe; }
     
     .related-section { padding: 12px; background: white; border-top: 1px solid #e9edf4; }
     .related-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; }
@@ -174,6 +188,7 @@
       .game-detail-title { font-size: 0.5rem; padding: 3px 10px; }
       .toc-header .toc-title { font-size: 0.8rem; }
       .toc-item .toc-content { font-size: 0.7rem; }
+      .game-tag { font-size: 0.6rem; padding: 4px 10px; }
     }
   </style>
 </head>
@@ -340,10 +355,10 @@
       </div>
     </div>
     
-    <!-- ====== INFO TAGS ====== -->
-    <div class="info-tags-section">
-      <div class="info-title">🔒 Safety & Game Info Tags</div>
-      <div class="info-tags-grid" id="infoTagsGrid"></div>
+    <!-- ====== REPLACED: GAME TAGS SECTION (instead of old info tags) ====== -->
+    <div class="game-tags-section">
+      <div class="game-tags-title">🏷️ Tags – All Games</div>
+      <div class="game-tags-container" id="gameTagsContainer"></div>
     </div>
     
     <!-- OTHER RELATED GAMES -->
@@ -463,19 +478,6 @@
     }
 
     let historyStack = [];
-
-    const infoTagsList = [
-      "🔒 Secure Payments", "✅ Verified App", "🛡 SSL Encrypted", "🔐 Safe Withdrawals", "📱 Mobile Optimized",
-      "🎯 75+ Games", "🃏 Rummy", "🃏 Teen Patti", "🎰 Slots", "🐉 Dragon vs Tiger",
-      "📊 Fair Play", "🎲 Random Generator", "💳 UPI Withdrawal", "🏦 Bank Transfer", "📞 24/7 Support",
-      "⭐ 4.5 Rating", "📥 10M+ Downloads", "🔥 Daily Bonus", "🎁 Welcome Offer", "💰 Instant Payout",
-      "🔄 Regular Updates", "🔞 18+ Only", "📱 Android APK", "⚡ Fast Loading", "🌐 Multiplayer",
-      "🎯 Skill Based", "🏆 Tournaments", "🎰 Jackpot Games", "📈 High Returns", "💵 Real Cash",
-      "📝 Easy Registration", "📱 Mobile Number Login", "🔑 OTP Verification", "👥 Refer & Earn", "🎁 ₹150 Referral",
-      "🏅 Trusted App", "⭐ User Reviews", "📊 Weekly Bonus", "🎉 Festive Offers", "💎 VIP Program",
-      "🔒 Privacy Policy", "📋 Terms Apply", "🛡 Anti-Fraud", "✅ KYC Verified", "📞 Customer Care",
-      "🎯 Quick Withdraw", "💳 Multiple Payment", "📱 Smooth UI", "⚡ Low Data Usage", "🔋 Battery Saver"
-    ];
 
     // ====== TOC TOGGLE ======
     document.getElementById('tocToggle').addEventListener('click', function() {
@@ -645,16 +647,39 @@
       document.getElementById('faq4Deposit').textContent = b.faq4d;
       document.getElementById('faq4Ref').textContent = b.refFaq4;
       
-      const tagsGrid = document.getElementById('infoTagsGrid');
-      tagsGrid.innerHTML = '';
-      const shuffledTags = [...infoTagsList].sort(() => Math.random() - 0.5);
-      shuffledTags.forEach(tag => {
-        const span = document.createElement('span');
-        span.className = 'info-tag';
-        span.textContent = tag;
-        tagsGrid.appendChild(span);
+      // ====== POPULATE GAME TAGS (instead of old info tags) ======
+      const tagsContainer = document.getElementById('gameTagsContainer');
+      tagsContainer.innerHTML = '';
+      uniqueGames.forEach(g => {
+        const tag = document.createElement('span');
+        tag.className = 'game-tag';
+        tag.textContent = g.name;
+        tag.dataset.name = g.name;
+        tag.dataset.bonus = g.bonus;
+        tag.dataset.withdrawal = g.withdrawal;
+        tag.dataset.downloadUrl = g.downloadUrl;
+        tag.dataset.img = g.img;
+        tag.dataset.rating = g.rating || getRandomRating();
+        tag.dataset.size = g.size || getRandomSize();
+        tag.dataset.votes = g.votes || getRandomVotes();
+        tag.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const gData = {
+            name: this.dataset.name,
+            bonus: this.dataset.bonus,
+            withdrawal: this.dataset.withdrawal,
+            downloadUrl: this.dataset.downloadUrl,
+            img: this.dataset.img,
+            rating: this.dataset.rating,
+            size: this.dataset.size,
+            votes: this.dataset.votes
+          };
+          showDetail(gData);
+        });
+        tagsContainer.appendChild(tag);
       });
       
+      // RELATED
       const relatedGrid = document.getElementById('relatedGrid');
       relatedGrid.innerHTML = '';
       const others = uniqueGames.filter(g => g.name !== game.name);
@@ -784,14 +809,6 @@
         }).catch(() => {
           prompt('Copy this link to share:', url);
         });
-      }
-    });
-
-    // Close TOC body when clicking outside
-    document.addEventListener('click', function(e) {
-      const toc = document.querySelector('.toc-section');
-      if (toc && !toc.contains(e.target)) {
-        // don't close automatically, user should toggle
       }
     });
 
