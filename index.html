@@ -1,10 +1,11 @@
-666
+999999
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Yono Games - Download Best Yono Games APK 2026</title>
+  <title>Yono Games - Premium LED Icons</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     body { background: #f5f7fc; padding: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
@@ -17,7 +18,6 @@
     .top-header { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: white; border-bottom: 1px solid #e9edf4; position: sticky; top: 0; z-index: 10; }
     .header-left { display: flex; align-items: center; gap: 6px; }
 
-    /* ====== CYAN ROUND LOGO (LED) ====== */
     .logo-cyan-round {
       width: 36px;
       height: 36px;
@@ -35,7 +35,6 @@
     .logo-cyan-round img { width: 90%; height: 90%; object-fit: cover; border-radius: 50%; display: block; }
     @keyframes cyanPulse { 0%,100%{ box-shadow:0 0 15px rgba(0,200,255,0.3),0 0 30px rgba(0,200,255,0.1); } 50%{ box-shadow:0 0 25px rgba(0,200,255,0.5),0 0 50px rgba(0,200,255,0.2); } }
 
-    /* ====== TELEGRAM COLOR MODEL + LED ROUND ====== */
     .site-name-led-round {
       display: inline-flex;
       align-items: center;
@@ -49,7 +48,6 @@
       min-height: 32px;
       overflow: visible;
     }
-    /* LED rotating border - slow moving */
     .site-name-led-round::before {
       content: '';
       position: absolute;
@@ -80,7 +78,6 @@
     }
     @keyframes ledSlowSpinRound { 0%{ transform:rotate(0deg); } 100%{ transform:rotate(360deg); } }
 
-    /* 4 LED dots inside */
     .site-name-led-round .led-dot-round {
       position: absolute;
       width: 8px;
@@ -121,7 +118,6 @@
     .share-btn:active { transform: scale(0.95); }
     .share-btn svg { width: 12px; height: 12px; fill: white; }
 
-    /* ====== TELEGRAM BUTTON WITH LED CORNERS ====== */
     .telegram-btn {
       display: inline-block;
       width: 32px;
@@ -168,7 +164,6 @@
 
     @keyframes ledPulseSlow { 0%,100%{ opacity:0.5; transform:scale(0.8); } 50%{ opacity:1; transform:scale(1.2); box-shadow:0 0 10px currentColor,0 0 20px currentColor; } }
 
-    /* MARQUEE, NAV, CARDS etc. */
     .marquee-container { background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d); padding: 6px 0; overflow: hidden; border-bottom: 2px solid #e9edf4; }
     .marquee-container marquee { color: #ffffff; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
     .marquee-container marquee span { margin: 0 15px; display: inline-block; }
@@ -209,25 +204,108 @@
     .detail-download .download-btn { background: #0a0a0a; color: white; border: none; padding: 8px 20px; border-radius: 60px; font-weight: 700; font-size: 0.85rem; width: 100%; cursor: pointer; text-align: center; display: block; text-decoration: none; }
     .detail-download .download-btn:active { transform: scale(0.97); }
 
+    /* ---------- PREMIUM LED ICON STYLES ---------- */
+    .led-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      position: relative;
+      flex-shrink: 0;
+      background: #000;
+      border: 2px solid #1a1a1a;
+      box-shadow: 0 0 15px rgba(0,255,0,0.1);
+    }
+    .led-icon .inner-icon {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+      text-shadow: 0 0 8px currentColor;
+      letter-spacing: 0.5px;
+    }
+    /* rotating border variants */
+    .led-icon.green-cyan::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #00ff00 0deg 60deg, #00ffff 120deg 180deg, #00ff00 240deg 300deg, #00ff00 360deg);
+      animation: ledSlowSpinRound 8s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.gold-pink::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #ffd700 0deg 50deg, #ff69b4 100deg 150deg, #ffd700 200deg 250deg, #ff69b4 300deg 350deg, #ffd700 360deg);
+      animation: ledSlowSpinRound 9s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.red-dark::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #ff0000 0deg 50deg, #8b0000 100deg 150deg, #ff0000 200deg 250deg, #8b0000 300deg 350deg, #ff0000 360deg);
+      animation: ledSlowSpinRound 7s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.green-red-yellow::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #00ff00 0deg 40deg, #ff0000 80deg 120deg, #ffff00 160deg 200deg, #00ff00 240deg 280deg, #ff0000 320deg 360deg);
+      animation: ledSlowSpinRound 10s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.yellow-white-green::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #ffff00 0deg 40deg, #ffffff 80deg 120deg, #006400 160deg 200deg, #ffff00 240deg 280deg, #ffffff 320deg 360deg);
+      animation: ledSlowSpinRound 11s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.red-yellow::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #ff0000 0deg 40deg, #ffff00 80deg 120deg, #ff0000 160deg 200deg, #ffff00 240deg 280deg, #ff0000 320deg 360deg);
+      animation: ledSlowSpinRound 8s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.white-red::before {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #ffffff 0deg 40deg, #ff0000 80deg 120deg, #ffffff 160deg 200deg, #ff0000 240deg 280deg, #ffffff 320deg 360deg);
+      animation: ledSlowSpinRound 9s linear infinite; z-index: 0;
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    }
+    .led-icon.glow-bg {
+      box-shadow: 0 0 20px rgba(0,255,0,0.15), 0 0 40px rgba(0,200,255,0.05);
+    }
+    .led-icon .inner-icon { 
+      font-size: 0.7rem; 
+      font-weight: 800; 
+      letter-spacing: 0.3px;
+    }
+
     .tag-section { padding: 10px; background: #f8fafc; border-top: 1px solid #e9edf4; }
-    .tag-section .tag-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; }
+    .tag-section .tag-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .tag-grid { display: flex; flex-direction: column; gap: 6px; }
     .tag-box { background: white; border-radius: 12px; padding: 12px 14px; border: 1px solid #e9edf4; }
-    .tag-box .tag-head { font-weight: 700; font-size: 0.8rem; color: #0b1e33; margin-bottom: 3px; display: flex; align-items: center; gap: 6px; }
+    .tag-box .tag-head { font-weight: 700; font-size: 0.8rem; color: #0b1e33; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; }
     .tag-box .tag-content { font-size: 0.7rem; color: #334155; line-height: 1.6; }
 
     .faq-section { padding: 10px; background: white; border-top: 1px solid #e9edf4; }
-    .faq-section .faq-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; }
+    .faq-section .faq-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .faq-grid { display: flex; flex-direction: column; gap: 6px; }
     .faq-box { background: #f8fafc; border-radius: 12px; padding: 10px 12px; border: 1px solid #e9edf4; }
-    .faq-box .faq-q { font-weight: 700; font-size: 0.75rem; color: #0b1e33; margin-bottom: 3px; }
+    .faq-box .faq-q { font-weight: 700; font-size: 0.75rem; color: #0b1e33; margin-bottom: 3px; display: flex; align-items: center; gap: 6px; }
     .faq-box .faq-a { font-size: 0.65rem; color: #334155; line-height: 1.5; }
 
     .toc-section { padding: 10px; background: #f8fafc; border-top: 1px solid #e9edf4; }
     .toc-header { display: flex; justify-content: space-between; align-items: center; background: white; padding: 10px 14px; border-radius: 12px; border: 1px solid #e9edf4; cursor: pointer; }
     .toc-header:active { transform: scale(0.97); }
     .toc-header .toc-left { display: flex; align-items: center; gap: 8px; }
-    .toc-header .toc-left .toc-icon { font-size: 1rem; }
+    .toc-header .toc-left .toc-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #000; border: 2px solid #1a1a1a; box-shadow: 0 0 15px rgba(255,0,0,0.1); }
+    .toc-header .toc-left .toc-icon .inner { font-size: 0.6rem; font-weight: 800; color: #fff; }
     .toc-header .toc-left .toc-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; }
     .toc-header .toc-right { font-size: 1.2rem; color: #64748b; transition: transform 0.3s ease; }
     .toc-header .toc-right.open { transform: rotate(180deg); }
@@ -243,13 +321,13 @@
     .toc-item .toc-content ul li::before { content: "• "; color: #2563eb; font-weight: 700; }
 
     .game-tags-section { padding: 10px; background: white; border-top: 1px solid #e9edf4; }
-    .game-tags-section .game-tags-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; }
+    .game-tags-section .game-tags-title { font-weight: 700; font-size: 0.85rem; color: #0b1e33; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .game-tags-container { display: flex; flex-wrap: wrap; gap: 6px; }
-    .game-tag { background: #eef2ff; color: #2563eb; padding: 5px 12px; border-radius: 40px; font-size: 0.65rem; font-weight: 600; border: 1px solid #b3c8e6; cursor: pointer; transition: 0.15s; display: inline-block; }
+    .game-tag { background: #eef2ff; color: #2563eb; padding: 5px 12px; border-radius: 40px; font-size: 0.65rem; font-weight: 600; border: 1px solid #b3c8e6; cursor: pointer; transition: 0.15s; display: inline-flex; align-items: center; gap: 4px; }
     .game-tag:active { transform: scale(0.95); background: #dbeafe; }
 
     .related-section { padding: 10px; background: white; border-top: 1px solid #e9edf4; }
-    .related-title { font-weight: 700; font-size: 0.8rem; color: #0b1e33; margin-bottom: 6px; }
+    .related-title { font-weight: 700; font-size: 0.8rem; color: #0b1e33; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
     .related-grid { display: flex; flex-direction: column; gap: 5px; }
     .related-item { display: flex; align-items: center; gap: 6px; padding: 5px 8px; background: #f8fafc; border-radius: 10px; border: 1px solid #e9edf4; cursor: pointer; }
     .related-item:active { transform: scale(0.97); }
@@ -267,7 +345,7 @@
     .card-img { width: 42px; height: 42px; border-radius: 10px; background: #f0f4ff; flex-shrink: 0; overflow: hidden; border: 1px solid #e2e8f0; margin-left: 18px; }
     .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .card-info { flex: 1; display: flex; flex-direction: column; gap: 1px; }
-    .card-name { font-weight: 700; font-size: 0.75rem; color: #0b1e33; }
+    .card-name { font-weight: 700; font-size: 0.75rem; color: #0b1e33; display: flex; align-items: center; gap: 4px; }
     .card-bonus { font-size: 0.6rem; color: #dc2626; font-weight: 600; }
     .card-withdraw { font-size: 0.55rem; color: #0a0a0a; font-weight: 500; }
     .card-download-sm { background: #0a0a0a; color: white; border: none; padding: 3px 10px; border-radius: 40px; font-weight: 600; font-size: 0.5rem; white-space: nowrap; cursor: pointer; }
@@ -300,6 +378,8 @@
       .card-number { width: 16px; height: 16px; font-size: 0.4rem; top: 2px; left: 2px; }
       .card-img { margin-left: 14px; width: 36px; height: 36px; }
       .telegram-btn .corner-led { width: 4px; height: 4px; }
+      .led-icon { width: 22px; height: 22px; }
+      .led-icon .inner-icon { font-size: 0.5rem; }
     }
   </style>
 </head>
@@ -311,7 +391,6 @@
       <div class="logo-cyan-round">
         <img src="https://i.ibb.co/CssC2WbG/1000022725.jpg" alt="All Yono Games Site" loading="eager">
       </div>
-      <!-- Telegram color model + LED round -->
       <div class="site-name-led-round">
         <span class="led-dot-round green"></span>
         <span class="led-dot-round cyan"></span>
@@ -399,20 +478,23 @@
     </div>
 
     <div class="tag-section">
-      <div class="tag-title" id="tagSectionTitle">📢 Top Offers</div>
+      <div class="tag-title" id="tagSectionTitle">
+        <span class="led-icon green-cyan glow-bg"><span class="inner-icon">📢</span></span>
+        <span>Top Offers</span>
+      </div>
       <div class="tag-grid" id="tagGridContainer">
-        <div class="tag-box"><div class="tag-head"><span class="ticon">🏆</span> <span id="tag1Title">Game Name</span> APK Download – Get ₹<span id="tag1Bonus">150</span> Instant Bonus!</div><div class="tag-content" id="tag1Content">Play skill-based Rummy, Teen Patti & slots. Safe withdrawals from ₹100. Start earning real cash in minutes – download APK & claim your bonus today! Referral Bonus: ₹<span id="tag1Ref">10</span></div></div>
-        <div class="tag-box"><div class="tag-head"><span class="ticon">💰</span> Unlock ₹<span id="tag2Bonus">500</span> Bonus in <span id="tag2Title">Game Name</span> App!</div><div class="tag-content" id="tag2Content">Enjoy thrilling games like Aviator, Rummy & more. Refer friends for extra cash. Fast, secure withdrawals via bank/UPI. Trusted by millions – start playing now! Referral Bonus: ₹<span id="tag2Ref">15</span></div></div>
-        <div class="tag-box"><div class="tag-head"><span class="ticon">🎁</span> <span id="tag3Title">Game Name</span> – Signup for ₹<span id="tag3Bonus">35</span>-₹<span id="tag3Bonus2">150</span> Free Bonus</div><div class="tag-content" id="tag3Content">Play 20+ exciting games including Dragon vs Tiger & slots. Minimum deposit ₹100, instant payouts. Download now & earn real money daily! Referral Bonus: ₹<span id="tag3Ref">8</span></div></div>
-        <div class="tag-box"><div class="tag-head"><span class="ticon">🎰</span> Experience <span id="tag4Title">Game Name</span> – ₹<span id="tag4Bonus">50</span> Welcome Bonus on Download</div><div class="tag-content" id="tag4Content">Build sequences, join cash tournaments & daily mystery rewards. Safe, fun, and secure gaming – start winning real cash today! Referral Bonus: ₹<span id="tag4Ref">20</span></div></div>
-        <div class="tag-box"><div class="tag-head"><span class="ticon">🇮🇳</span> Dive into <span id="tag5Title">Game Name</span> – India's Top Online Gaming App</div><div class="tag-content" id="tag5Content">Get ₹<span id="tag5Bonus">51</span> signup bonus, play Rummy, Teen Patti, slots & Aviator. Withdraw from ₹100, join 1Cr+ players & claim daily bonuses. Download APK now! Referral Bonus: ₹<span id="tag5Ref">12</span></div></div>
+        <div class="tag-box"><div class="tag-head"><span class="led-icon gold-pink glow-bg"><span class="inner-icon">🏆</span></span> <span id="tag1Title">Game Name</span> APK Download – Get ₹<span id="tag1Bonus">150</span> Instant Bonus!</div><div class="tag-content" id="tag1Content">Play skill-based Rummy, Teen Patti & slots. Safe withdrawals from ₹100. Start earning real cash in minutes – download APK & claim your bonus today! Referral Bonus: ₹<span id="tag1Ref">10</span></div></div>
+        <div class="tag-box"><div class="tag-head"><span class="led-icon gold-pink glow-bg"><span class="inner-icon">💰</span></span> Unlock ₹<span id="tag2Bonus">500</span> Bonus in <span id="tag2Title">Game Name</span> App!</div><div class="tag-content" id="tag2Content">Enjoy thrilling games like Aviator, Rummy & more. Refer friends for extra cash. Fast, secure withdrawals via bank/UPI. Trusted by millions – start playing now! Referral Bonus: ₹<span id="tag2Ref">15</span></div></div>
+        <div class="tag-box"><div class="tag-head"><span class="led-icon red-dark glow-bg"><span class="inner-icon">🎁</span></span> <span id="tag3Title">Game Name</span> – Signup for ₹<span id="tag3Bonus">35</span>-₹<span id="tag3Bonus2">150</span> Free Bonus</div><div class="tag-content" id="tag3Content">Play 20+ exciting games including Dragon vs Tiger & slots. Minimum deposit ₹100, instant payouts. Download now & earn real money daily! Referral Bonus: ₹<span id="tag3Ref">8</span></div></div>
+        <div class="tag-box"><div class="tag-head"><span class="led-icon green-red-yellow glow-bg"><span class="inner-icon">🎰</span></span> Experience <span id="tag4Title">Game Name</span> – ₹<span id="tag4Bonus">50</span> Welcome Bonus on Download</div><div class="tag-content" id="tag4Content">Build sequences, join cash tournaments & daily mystery rewards. Safe, fun, and secure gaming – start winning real cash today! Referral Bonus: ₹<span id="tag4Ref">20</span></div></div>
+        <div class="tag-box"><div class="tag-head"><span class="led-icon yellow-white-green glow-bg"><span class="inner-icon">🇮🇳</span></span> Dive into <span id="tag5Title">Game Name</span> – India's Top Online Gaming App</div><div class="tag-content" id="tag5Content">Get ₹<span id="tag5Bonus">51</span> signup bonus, play Rummy, Teen Patti, slots & Aviator. Withdraw from ₹100, join 1Cr+ players & claim daily bonuses. Download APK now! Referral Bonus: ₹<span id="tag5Ref">12</span></div></div>
       </div>
     </div>
 
     <div class="toc-section">
       <div class="toc-header" id="tocToggle">
         <div class="toc-left">
-          <span class="toc-icon">📋</span>
+          <span class="toc-icon"><span class="inner">📋</span></span>
           <span class="toc-title">Table of Contents</span>
         </div>
         <div class="toc-right" id="tocArrow">▼</div>
@@ -468,22 +550,31 @@
     </div>
 
     <div class="faq-section">
-      <div class="faq-title">❓ Frequently Asked Questions</div>
+      <div class="faq-title">
+        <span class="led-icon red-yellow glow-bg"><span class="inner-icon">❓</span></span>
+        <span>Frequently Asked Questions</span>
+      </div>
       <div class="faq-grid">
-        <div class="faq-box"><div class="faq-q">1. What Is The <span id="faq1Name">Game Name</span> app APK?</div><div class="faq-a" id="faq1Content">The <span id="faq1Name2">Game Name</span> APP APK is an excellent application that offers users a sign-up bonus of ₹<span id="faq1Bonus">700</span> when they join. This game includes a fantastic bonus program, and you can learn more by reading the complete post. Additionally, <span id="faq1Name3">Game Name</span> APK is a popular slots game with a minimum withdrawal amount of ₹100. Referral Bonus: ₹<span id="faq1Ref">25</span></div></div>
-        <div class="faq-box"><div class="faq-q">2. How to Sign Up for <span id="faq2Name">Game Name</span> APK?</div><div class="faq-a" id="faq2Content">To sign up for the <span id="faq2Name2">Game Name</span> APK, follow these steps:<br><strong>•</strong> Click on the Download Button for the <span id="faq2Name3">Game Name</span> APK.<br><strong>•</strong> Select OK to start the download.<br><strong>•</strong> Install the App application on your smartphone.<br><strong>•</strong> Open the new app and click on Play as Guest.<br><strong>•</strong> Click on the Profile Button and bind your mobile number.<br>After completing these steps, you will receive a sign-up bonus of ₹<span id="faq2Bonus">500</span>. Referral Bonus: ₹<span id="faq2Ref">18</span></div></div>
-        <div class="faq-box"><div class="faq-q">3. How Many Games Are Available In The <span id="faq3Name">Game Name</span> App?</div><div class="faq-a" id="faq3Content">The <span id="faq3Name2">Game Name</span> app offers support for 75+ different types of games. You can enjoy a variety of games such as Rummy, Teen Patti, 7 Up Down, Dragon vs Tiger, and many more.</div></div>
-        <div class="faq-box"><div class="faq-q">4. What are some of the best features of the <span id="faq4Name">Game Name</span> app APK?</div><div class="faq-a" id="faq4Content"><strong>•</strong> Enjoy a bonus of ₹<span id="faq4Bonus">51</span> for free in the APK.<br><strong>•</strong> Access to 20 gaming options.<br><strong>•</strong> Earn up to ₹<span id="faq4Bonus2">150</span> for inviting friends.<br><strong>•</strong> Withdrawals can be made starting from a minimum of ₹<span id="faq4Withdraw">500</span>.<br><strong>•</strong> Click on the Profile Button and bind your mobile number.<br><strong>•</strong> The minimum deposit required is ₹<span id="faq4Deposit">100</span>. Referral Bonus: ₹<span id="faq4Ref">22</span></div></div>
+        <div class="faq-box"><div class="faq-q"><span class="led-icon white-red glow-bg" style="width:20px;height:20px;"><span class="inner-icon" style="font-size:0.5rem;">Q</span></span> 1. What Is The <span id="faq1Name">Game Name</span> app APK?</div><div class="faq-a" id="faq1Content">The <span id="faq1Name2">Game Name</span> APP APK is an excellent application that offers users a sign-up bonus of ₹<span id="faq1Bonus">700</span> when they join. This game includes a fantastic bonus program, and you can learn more by reading the complete post. Additionally, <span id="faq1Name3">Game Name</span> APK is a popular slots game with a minimum withdrawal amount of ₹100. Referral Bonus: ₹<span id="faq1Ref">25</span></div></div>
+        <div class="faq-box"><div class="faq-q"><span class="led-icon white-red glow-bg" style="width:20px;height:20px;"><span class="inner-icon" style="font-size:0.5rem;">Q</span></span> 2. How to Sign Up for <span id="faq2Name">Game Name</span> APK?</div><div class="faq-a" id="faq2Content">To sign up for the <span id="faq2Name2">Game Name</span> APK, follow these steps:<br><strong>•</strong> Click on the Download Button for the <span id="faq2Name3">Game Name</span> APK.<br><strong>•</strong> Select OK to start the download.<br><strong>•</strong> Install the App application on your smartphone.<br><strong>•</strong> Open the new app and click on Play as Guest.<br><strong>•</strong> Click on the Profile Button and bind your mobile number.<br>After completing these steps, you will receive a sign-up bonus of ₹<span id="faq2Bonus">500</span>. Referral Bonus: ₹<span id="faq2Ref">18</span></div></div>
+        <div class="faq-box"><div class="faq-q"><span class="led-icon white-red glow-bg" style="width:20px;height:20px;"><span class="inner-icon" style="font-size:0.5rem;">Q</span></span> 3. How Many Games Are Available In The <span id="faq3Name">Game Name</span> App?</div><div class="faq-a" id="faq3Content">The <span id="faq3Name2">Game Name</span> app offers support for 75+ different types of games. You can enjoy a variety of games such as Rummy, Teen Patti, 7 Up Down, Dragon vs Tiger, and many more.</div></div>
+        <div class="faq-box"><div class="faq-q"><span class="led-icon white-red glow-bg" style="width:20px;height:20px;"><span class="inner-icon" style="font-size:0.5rem;">Q</span></span> 4. What are some of the best features of the <span id="faq4Name">Game Name</span> app APK?</div><div class="faq-a" id="faq4Content"><strong>•</strong> Enjoy a bonus of ₹<span id="faq4Bonus">51</span> for free in the APK.<br><strong>•</strong> Access to 20 gaming options.<br><strong>•</strong> Earn up to ₹<span id="faq4Bonus2">150</span> for inviting friends.<br><strong>•</strong> Withdrawals can be made starting from a minimum of ₹<span id="faq4Withdraw">500</span>.<br><strong>•</strong> Click on the Profile Button and bind your mobile number.<br><strong>•</strong> The minimum deposit required is ₹<span id="faq4Deposit">100</span>. Referral Bonus: ₹<span id="faq4Ref">22</span></div></div>
       </div>
     </div>
 
     <div class="game-tags-section">
-      <div class="game-tags-title">🏷️ Tags – All Yono Games</div>
+      <div class="game-tags-title">
+        <span class="led-icon green-cyan glow-bg"><span class="inner-icon">🏷️</span></span>
+        <span>Tags – All Yono Games</span>
+      </div>
       <div class="game-tags-container" id="gameTagsContainer"></div>
     </div>
 
     <div class="related-section">
-      <div class="related-title">💲 Other Related Yono Games</div>
+      <div class="related-title">
+        <span class="led-icon gold-pink glow-bg"><span class="inner-icon">💲</span></span>
+        <span>Other Related Yono Games</span>
+      </div>
       <div class="related-grid" id="relatedGrid"></div>
     </div>
   </div>
@@ -756,21 +847,21 @@
       const gName = game.name;
       const b = getUniqueBonuses(gName);
 
-      document.getElementById('tagSectionTitle').textContent = '📢 ' + gName + ' – Top Offers';
-      document.getElementById('tag1Title').textContent = gName;
+      document.getElementById('tagSectionTitle').innerHTML = '<span class="led-icon green-cyan glow-bg"><span class="inner-icon">📢</span></span> <span>Top Offers</span>';
+      document.querySelector('#tag1Title').textContent = gName;
       document.getElementById('tag1Bonus').textContent = b.tag1;
       document.getElementById('tag1Ref').textContent = b.ref1;
-      document.getElementById('tag2Title').textContent = gName;
+      document.querySelector('#tag2Title').textContent = gName;
       document.getElementById('tag2Bonus').textContent = b.tag2;
       document.getElementById('tag2Ref').textContent = b.ref2;
-      document.getElementById('tag3Title').textContent = gName;
+      document.querySelector('#tag3Title').textContent = gName;
       document.getElementById('tag3Bonus').textContent = b.tag3;
       document.getElementById('tag3Bonus2').textContent = b.tag3b;
       document.getElementById('tag3Ref').textContent = b.ref3;
-      document.getElementById('tag4Title').textContent = gName;
+      document.querySelector('#tag4Title').textContent = gName;
       document.getElementById('tag4Bonus').textContent = b.tag4;
       document.getElementById('tag4Ref').textContent = b.ref4;
-      document.getElementById('tag5Title').textContent = gName;
+      document.querySelector('#tag5Title').textContent = gName;
       document.getElementById('tag5Bonus').textContent = b.tag5;
       document.getElementById('tag5Ref').textContent = b.ref5;
 
